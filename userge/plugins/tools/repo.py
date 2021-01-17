@@ -17,9 +17,9 @@ async def see_repo(message: Message):
 
     __Durable as a Serge__
 
-• **userge version** : `{get_version()}`
-• **license** : {versions.__license__}
-• **copyright** : {versions.__copyright__}
-• **repo** : [Userge]({Config.UPSTREAM_REPO})
+• **WildyBOT version** : '1.0.0'
+• **license** : 'OpenSource'
+• **copyright** : 'Hasil Repack'
+• **repo** : 'Minta Ke @wildyvpn'
 """
     await message.edit(output)
