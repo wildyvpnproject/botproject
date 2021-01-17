@@ -23,10 +23,10 @@ ALLOWED_COLLECTION = get_collection("PM_PERMIT")
 pmCounter: Dict[int, int] = {}
 _IS_INLINE = True
 allowAllFilter = filters.create(lambda _, __, ___: Config.ALLOW_ALL_PMS)
-noPmMessage = bk_noPmMessage = ("Hello {fname} this is an automated message\n"
-                                "Please wait until you get approved to direct message "
-                                "And please dont spam until then ")
-blocked_message = bk_blocked_message = "**You were automatically blocked**"
+noPmMessage = bk_noPmMessage = ("Halo Bos {fname} Ku Ingatin ya\n"
+                                "Jangan Spam atau kamu Di Ban "
+                                "Secara Automatis ")
+blocked_message = bk_blocked_message = "**MAMPOS LU DI BILANGIN GA MAU DENGAN BEGO,KAN DH KENA BANNED**"
 
 
 async def _init() -> None:
@@ -360,7 +360,7 @@ if userge.has_bot:
             await userge.block_user(c_q.from_user.id)
             await asyncio.sleep(1)
             await CHANNEL.log(
-                f"#BLOCKED\n{c_q.from_user.mention} has been blocked due to spamming in pm !! ")
+                f"#BLOCKED\n{c_q.from_user.mention}Mampos kau di bilangin malah bandel !! ")
 
     @userge.bot.on_callback_query(filters.regex(pattern=r"^pm_contact$"))
     async def pm_contact_callback(_, c_q: CallbackQuery):
@@ -370,7 +370,7 @@ if userge.has_bot:
         else:
             user_dict = await userge.get_user_dict(c_q.from_user.id)
             await c_q.edit_message_text(
-                noPmMessage.format_map(SafeDict(**user_dict)) + '\n`- Protected by userge`')
+                noPmMessage.format_map(SafeDict(**user_dict)) + '\n`- Di Repack Dengan ❤ by @wildyvpn`')
             buttons = InlineKeyboardMarkup(
                 [
                     [
