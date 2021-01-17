@@ -26,9 +26,9 @@ async def pingme(message: Message):
         end = datetime.now()
         t_m_s = (end - start).microseconds / 1000
         m_s = round((t_m_s - 0.6) / 3, 3)
-        await message.edit(f"**WildyVPN Jaya !....**\n`{m_s} ms`")
+        await message.edit(f"**Sayang!....**\n`{m_s} ms`")
     else:
-        await message.edit('`WildyVPN Jaya !....`')
+        await message.edit('`Sayang!....`')
         end = datetime.now()
         m_s = (end - start).microseconds / 1000
-        await message.edit(f"**WildyVPN Jaya !....**\n`{m_s} ms`")
+        await message.edit(f"**Sayang!....**\n`{m_s} ms`")
