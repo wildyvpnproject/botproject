@@ -1,16 +1,16 @@
 {
     "name": "Userge",
     "description": "telegram pluggable userbot",
-    "logo": "https://imgur.com/download/Inyeb1S",
+    "logo": "https://t.me/wildyvpn_channel/18",
     "keywords": [
-        "userge",
+        "wildyvpnbot",
         "telegram",
         "pluggable",
         "userbot"
     ],
-    "repository": "https://github.com/UsergeTeam/Userge",
+    "repository": "https://github.com/wildyvpnproject/botproject",
     "website": "https://github.com/Userge",
-    "success_url": "https://t.me/theUserge",
+    "success_url": "https://t.me/wildyvpn",
     "env": {
         "API_ID": {"description": "Get this value from https://my.telegram.org"},
         "API_HASH": {"description": "Get this value from https://my.telegram.org"},
