@@ -33,7 +33,7 @@ async def covid(message: Message):
         except ValueError:
             await message.err(f"invalid country name <{country}>!")
             return
-        result += f"<u>Covid Status for {data['country']}</u>\n\n"
+        result += f"<u>Status Corona Hari Ini : {data['country']}</u>\n\n"
         result += f"**new cases** : `{data['new_cases']}`\n"
         result += f"**new deaths** : `{data['new_deaths']}`\n\n"
         result += f"**critical** : `{data['critical']}`\n"
@@ -48,8 +48,8 @@ async def covid(message: Message):
         result += f"**population** : `{data['population']}`\n"
     else:
         result += "<u>Covid Status in the world</u>\n\n"
-        result += f"**total active cases** : `{covid_.get_total_active_cases()}`\n"
-        result += f"**total confirmed cases** : `{covid_.get_total_confirmed_cases()}`\n"
-        result += f"**total deaths** : `{covid_.get_total_deaths()}`\n"
-        result += f"**total recovered** : `{covid_.get_total_recovered()}`\n"
+        result += f"**Total Diduga** : `{covid_.get_total_active_cases()}`\n"
+        result += f"**Total Positif** : `{covid_.get_total_confirmed_cases()}`\n"
+        result += f"**Total Kematiaan** : `{covid_.get_total_deaths()}`\n"
+        result += f"**Total Sembuh** : `{covid_.get_total_recovered()}`\n"
     await message.edit_or_send_as_file(result)
