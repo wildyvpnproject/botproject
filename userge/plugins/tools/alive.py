@@ -86,13 +86,13 @@ def _get_alive_text_and_markup(message: Message) -> Tuple[str, Optional[InlineKe
 **😥 PHP Version ** : `7.4`
 **🐍 Ular Version ** : `{versions.__python_version__}`
 **😘 Gay Version ** : `1.0.0`
-**💩 Taik Version ** : `{versions.__pyro_version__}`"""
-    if not message.client.is_bot:
-        output += f"""\n
+**💩 Taik Version ** : `{versions.__pyro_version__}`
 **=========================**
 🎖 **Versi Bot** : `1.0.0`
 👥 **Repack By Sayangmu**
 """
+    if not message.client.is_bot:
+        output += f"""\n"""
     else:
         copy_ = "https://t.me/wildyvpn"
         markup = InlineKeyboardMarkup([
