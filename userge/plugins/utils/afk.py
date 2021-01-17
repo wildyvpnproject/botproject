@@ -115,7 +115,7 @@ async def handle_afk_outgoing(message: Message) -> None:
     global IS_AFK  # pylint: disable=global-statement
     IS_AFK = False
     afk_time = time_formatter(round(time.time() - TIME))
-    replied: Message = await message.reply("`I'm no longer AFK!`", log=__name__)
+    replied: Message = await message.reply("`Santai dlu Bre Gua Lagi AFK!`", log=__name__)
     coro_list = []
     if USERS:
         p_msg = ''
@@ -131,7 +131,7 @@ async def handle_afk_outgoing(message: Message) -> None:
                 g_count += gcount
         coro_list.append(replied.edit(
             f"`You recieved {p_count + g_count} messages while you were away. "
-            f"Check log for more details.`\n\n**AFK time** : __{afk_time}__", del_in=3))
+            f"Check log for more details.`\n\n**Waktu AFK** : __{afk_time}__", del_in=3))
         out_str = f"You've recieved **{p_count + g_count}** messages " + \
             f"from **{len(USERS)}** users while you were away!\n\n**AFK time** : __{afk_time}__\n"
         if p_count:
