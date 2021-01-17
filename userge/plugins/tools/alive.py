@@ -65,29 +65,31 @@ def _get_mode() -> str:
 def _get_alive_text_and_markup(message: Message) -> Tuple[str, Optional[InlineKeyboardMarkup]]:
     markup = None
     output = f"""
+**=========================**
 **⏱️ UmurBot** : `{userge.uptime}`
 **📀 Versi** : `{get_version()}`
 **⚙️ Mode** : `{_get_mode().upper()}`
 **❤ Sayang** : `active`
 **😘 Gay** : `active`
 **✅ Trusted** : `enabled`
-
+**=========================**
 🔰 **Bot ** : `enabled`
 🔰 **Gaymode ** : `enabled`
 🔰 **Akses Penuh ** : `{_parse_arg(Config.SUDO_ENABLED)}`
 🔰 **Anti Bocil ** : `{_parse_arg(not Config.ALLOW_ALL_PMS)}`
 🔰 **Anti Spam ** : `{_parse_arg(Config.ANTISPAM_SENTRY)}`"""
     if Config.HEROKU_APP:
-        output += f"\n• **Mode Dyno **: `{_parse_arg(Config.RUN_DYNO_SAVER)}`"
+        output += f"\n🔰 **Mode Dyno **: `{_parse_arg(Config.RUN_DYNO_SAVER)}`"
     output += f"""
-• **Fitur Tambahan **: `{_parse_arg(Config.LOAD_UNOFFICIAL_PLUGINS)}`
-
+🔰 **Fitur Tambahan **: `{_parse_arg(Config.LOAD_UNOFFICIAL_PLUGINS)}`
+**=========================**
 **😥 PHP Version ** : `7.4`
 **🐍 Ular Version ** : `{versions.__python_version__}`
 **😘 Gay Version ** : `1.0.0`
 **💩 Taik Version ** : `{versions.__pyro_version__}`"""
     if not message.client.is_bot:
         output += f"""\n
+**=========================**
 🎖 **Versi Bot** : `1.0.0`
 👥 **Repack By Sayangmu**
 """
