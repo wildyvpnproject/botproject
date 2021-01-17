@@ -77,8 +77,8 @@ def _get_alive_text_and_markup(message: Message) -> Tuple[str, Optional[InlineKe
     output += f"""
 • **Fitur Tambahan **: `{_parse_arg(Config.LOAD_UNOFFICIAL_PLUGINS)}`
 
-    **__Python__**: `{versions.__python_version__}`
-    **__Pyrogram__**: `{versions.__pyro_version__}`"""
+    **🐍 Ular Piton **: `{versions.__python_version__}`
+    **🦎 Adek Piton **: `{versions.__pyro_version__}`"""
     if not message.client.is_bot:
         output += f"""\n
 🎖 **Versi Colongan** | 👥 **WildyVPN** | 🧪 **Ready SSH Prem Hubungi @wildyvpn**
