@@ -15,11 +15,11 @@ async def see_repo(message: Message):
     output = f"""
 **Halo Sayang**, __Saya Pakai__ 🔥 **WildyVPN Bot** 🔥
 
-    __Durable as a Serge__
+    __😘AKUSAYANGKAMU😘__
 
-• **WildyBOT version** : '1.0.0'
-• **license** : 'OpenSource'
-• **copyright** : 'Hasil Repack'
-• **repo** : 'Minta Ke @wildyvpn'
+🔰 **WildyBOT version** : '1.0.0'
+🔰 **license** : 'OpenSource'
+🔰 **copyright** : 'Hasil Repack'
+🔰 **repo** : 'Minta Ke @wildyvpn'
 """
     await message.edit(output)
