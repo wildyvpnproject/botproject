@@ -88,7 +88,7 @@ def _get_alive_text_and_markup(message: Message) -> Tuple[str, Optional[InlineKe
         markup = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton(text="👥 Website", url="https://wildyvpn.my.id"),
-                InlineKeyboardButton(text="🧪 Team", url="https://t.me/wildyvpn")
+                InlineKeyboardButton(text="🧪 Team", url="https://t.me/team_wildyvpn")
             ],
             [InlineKeyboardButton(text="🎖 WILDYVPN", url=copy_)]
         ])
