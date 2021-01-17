@@ -27,7 +27,7 @@ _LOG = logging.getLogger(__name__)
 _IS_TELEGRAPH = False
 _IS_STICKER = False
 
-_DEFAULT = "https://t.me/wildyvpn"
+_DEFAULT = "https://t.me/wildyvpn_channel/18"
 _CHAT, _MSG_ID = None, None
 _LOGO_ID = None
 
@@ -65,18 +65,17 @@ def _get_mode() -> str:
 def _get_alive_text_and_markup(message: Message) -> Tuple[str, Optional[InlineKeyboardMarkup]]:
     markup = None
     output = f"""
-    **BOT Repack By WildyVPN** ``
-**Umur bot** : `{userge.uptime}`
-**Versi Bot** : `{get_version()}`
-**Mode Bot** : `{_get_mode().upper()}`
+**⏱ UmurBot** : `{userge.uptime}`
+**💡 Versi** : `{get_version()}`
+**⚙️ Mode** : `{_get_mode().upper()}`
 
-• **Bot**: `{_parse_arg(Config.SUDO_ENABLED)}`
-• **Pelindung Bocil**: `{_parse_arg(not Config.ALLOW_ALL_PMS)}`
-• **Anti Spam**: `{_parse_arg(Config.ANTISPAM_SENTRY)}`"""
+• **Sudo**: `{_parse_arg(Config.SUDO_ENABLED)}`
+• **Pm-Guard**: `{_parse_arg(not Config.ALLOW_ALL_PMS)}`
+• **Anti-Spam**: `{_parse_arg(Config.ANTISPAM_SENTRY)}`"""
     if Config.HEROKU_APP:
-        output += f"\n• **Server Running**: `{_parse_arg(Config.RUN_DYNO_SAVER)}`"
+        output += f"\n• **Dyno-saver**: `{_parse_arg(Config.RUN_DYNO_SAVER)}`"
     output += f"""
-• **Mode Troll**: `{_parse_arg(Config.LOAD_UNOFFICIAL_PLUGINS)}`
+• **Unofficial**: `{_parse_arg(Config.LOAD_UNOFFICIAL_PLUGINS)}`
 
     **__Python__**: `{versions.__python_version__}`
     **__Pyrogram__**: `{versions.__pyro_version__}`"""
@@ -88,10 +87,10 @@ def _get_alive_text_and_markup(message: Message) -> Tuple[str, Optional[InlineKe
         copy_ = "https://github.com/UsergeTeam/Userge/blob/master/LICENSE"
         markup = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton(text="By WildyVPN", url="https://t.me/wildyvpn"),
-                InlineKeyboardButton(text="", url=Config.UPSTREAM_REPO)
+                InlineKeyboardButton(text="👥 Website", url="https://wildyvpn.my.id"),
+                InlineKeyboardButton(text="🧪 Team", url=Config.UPSTREAM_REPO)
             ],
-            [InlineKeyboardButton(text="🎖 WildyBot V1", url=copy_)]
+            [InlineKeyboardButton(text="🎖 WILDYVPN", url=copy_)]
         ])
     return (output, markup)
 
