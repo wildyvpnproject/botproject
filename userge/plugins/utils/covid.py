@@ -19,7 +19,7 @@ from userge import userge, Message, pool
     'usage': "{tr}covid [flag | country]",
     'examples': ["{tr}covid -l", "{tr}covid", "{tr}covid india"]})
 async def covid(message: Message):
-    await message.edit("`fetching covid ...`")
+    await message.edit("`Mengambil Data Dari Server ...`")
     covid_ = await pool.run_in_thread(Covid)("worldometers")
     country = message.input_str
     result = ""
@@ -47,9 +47,10 @@ async def covid(message: Message):
         result += f"**total deaths per million** : `{data['total_deaths_per_million']}`\n"
         result += f"**population** : `{data['population']}`\n"
     else:
-        result += "<u>Covid Status in the world</u>\n\n"
+        result += "**Informasi Corona Saat ini**\n\n"
         result += f"**Total Diduga** : `{covid_.get_total_active_cases()}`\n"
         result += f"**Total Positif** : `{covid_.get_total_confirmed_cases()}`\n"
         result += f"**Total Kematiaan** : `{covid_.get_total_deaths()}`\n"
         result += f"**Total Sembuh** : `{covid_.get_total_recovered()}`\n"
+        result += f"**Bot By WildyVPN** : ``\n"
     await message.edit_or_send_as_file(result)
