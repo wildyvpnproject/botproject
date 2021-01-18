@@ -13,13 +13,13 @@ from userge import userge, Message, Config, versions, get_version
 async def see_repo(message: Message):
     """see repo"""
     output = f"""
-**Halo Sayang**, __Saya Pakai__ 🔥 **WildyVPN Bot** 🔥
+**Saya Pakai**, 😘 **WildyVPN Bot** 😘
 
     __😘AKUSAYANGKAMU😘__
 
-🔰 **WildyBOT version** : '1.0.0'
-🔰 **license** : 'OpenSource'
-🔰 **copyright** : 'Hasil Repack'
-🔰 **repo** : 'Minta Ke @wildyvpn'
+🔰 **WildyBOT version** : 1.0.0
+🔰 **license** : OpenSource
+🔰 **copyright** : Hasil Repack
+🔰 **repo** : Minta Ke @wildyvpn
 """
     await message.edit(output)
