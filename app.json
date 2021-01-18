@@ -31,7 +31,8 @@
         "HEROKU_API_KEY": {
             "description": "Di Dapai dari https://dashboard.heroku.com/account",
             "required": false}
-        "LOAD_UNOFFICIAL_PLUGINS": {"description": "Isi true Jika mau Menu Tambahan Jika Tidak Isi false"},
+        "LOAD_UNOFFICIAL_PLUGINS": {
+            "description": "Isi true Jika mau Menu Tambahan Jika Tidak Isi false"},
     },
     "addons": [],
     "buildpacks": [
