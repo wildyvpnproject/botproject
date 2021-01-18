@@ -86,7 +86,7 @@ async def kang_(message: Message):
         else:
             u_name = user.first_name or user.id
         packname = f"a{user.id}_by_wildyvpn_{pack}"
-        custom_packnick = Config.CUSTOM_PACK_NAME or f"{u_name}'s kang pack"
+        custom_packnick = Config.CUSTOM_PACK_NAME or f"{u_name}'s wildyvpn"
         packnick = f"{custom_packnick} Vol.{pack}"
         cmd = '/newpack'
         if resize:
@@ -116,7 +116,7 @@ async def kang_(message: Message):
                 limit = "50" if is_anim else "120"
                 while limit in msg.text:
                     pack += 1
-                    packname = f"a{user.id}_by_userge_{pack}"
+                    packname = f"a{user.id}_by_wildyvpn_{pack}"
                     packnick = f"{custom_packnick} Vol.{pack}"
                     if is_anim:
                         packname += "_anim"
@@ -153,15 +153,15 @@ async def kang_(message: Message):
                 await conv.send_document(photo)
                 rsp = await conv.get_response(mark_read=True)
                 if "Sorry, the file type is invalid." in rsp.text:
-                    await message.edit("`Failed to add sticker, use` @Stickers "
-                                       "`bot to add the sticker manually.`")
+                    await message.edit("`Maaf ada kesalahan` "
+                                       "`Silakan Buat manual Via @sticker.`")
                     return
                 await conv.send_message(emoji_)
                 await conv.get_response(mark_read=True)
                 await conv.send_message('/done')
                 await conv.get_response(mark_read=True)
         else:
-            await message.edit("`Brewing a new Pack...`")
+            await message.edit("`Membuat Sticker Colongan...`")
             async with userge.conversation('Stickers') as conv:
                 try:
                     await conv.send_message(cmd)
@@ -191,8 +191,8 @@ async def kang_(message: Message):
         if '-d' in message.flags:
             await message.delete()
         else:
-            out = "__kanged__" if '-s' in message.flags else \
-                f"[kanged](t.me/addstickers/{packname})"
+            out = "__Tercolong__" if '-s' in message.flags else \
+                f"[Tercolong](t.me/addstickers/{packname})"
             await message.edit(f"**Sticker** {out}**!**")
         if os.path.exists(str(photo)):
             os.remove(photo)
@@ -205,10 +205,10 @@ async def sticker_pack_info_(message: Message):
     """ get sticker pack info """
     replied = message.reply_to_message
     if not replied:
-        await message.edit("`I can't fetch info from nothing, can I ?!`")
+        await message.edit("`Maaf ada Kesalahan Server!`")
         return
     if not replied.sticker:
-        await message.edit("`Reply to a sticker to get the pack details`")
+        await message.edit("`Pakai Reply Goblok.....`")
         return
     await message.edit("`Sabar Sedang Colong Sticker..`")
     get_stickerset = await message.client.send(
