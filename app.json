@@ -12,6 +12,7 @@
     "website": "https://wildyvpn.my.id",
     "success_url": "https://t.me/wildyvpn",
     "env": {
+        "LOAD_UNOFFICIAL_PLUGINS": {"description": "Isi true Jika mau Menu Tambahan Jika Tidak Isi false."},
         "API_ID": {"description": "Di dapat Dari https://my.telegram.org"},
         "API_HASH": {"description": "Di dapat Dari https://my.telegram.org"},
         "DATABASE_URL": {"description": "Di Dapat Dari https://cloud.mongodb.com/"},
@@ -31,8 +32,6 @@
         "HEROKU_API_KEY": {
             "description": "Di Dapai dari https://dashboard.heroku.com/account",
             "required": false}
-        "LOAD_UNOFFICIAL_PLUGINS": {
-            "description": "Isi true Jika mau Menu Tambahan Jika Tidak Isi false"},
     },
     "addons": [],
     "buildpacks": [
