@@ -25,7 +25,7 @@ _IS_INLINE = True
 allowAllFilter = filters.create(lambda _, __, ___: Config.ALLOW_ALL_PMS)
 noPmMessage = bk_noPmMessage = ("Halo Bos {fname} Ku Ingatin ya\n"
                                 "Jangan Spam atau kamu Di Ban "
-                                "Secara Automatis ")
+                                "Secara Auto aowkoak ")
 blocked_message = bk_blocked_message = "**MAMPOS LU DI BILANGIN GA MAU DENGAN BEGO,KAN DH KENA BANNED**"
 
 
@@ -278,10 +278,10 @@ async def uninvitedPmHandler(message: Message):
                 )
             except (IndexError, BotInlineDisabled):
                 await message.reply(
-                    noPmMessage.format_map(SafeDict(**user_dict)) + '\n`- Protected by userge`')
+                    noPmMessage.format_map(SafeDict(**user_dict)) + '\n`- Bot By WILDYVPN`')
         else:
             await message.reply(
-                noPmMessage.format_map(SafeDict(**user_dict)) + '\n`- Protected by userge`')
+                noPmMessage.format_map(SafeDict(**user_dict)) + '\n`- Bot By WILDYVPN`')
         await asyncio.sleep(1)
         await CHANNEL.log(f"#NEW_MESSAGE\n{user_dict['mention']} has messaged you")
 
