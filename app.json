@@ -1,7 +1,7 @@
 {
     "name": "WildyVPN Bot",
     "description": "telegram pluggable userbot",
-    "logo": "https://t.me/wildyvpn_channel/18",
+    "logo": "http://wildyvpn.my.id/fav2.png",
     "keywords": [
         "wildyvpnbot",
         "telegram",
@@ -9,28 +9,29 @@
         "userbot"
     ],
     "repository": "https://github.com/wildyvpnproject/botproject",
-    "website": "https://github.com/Userge",
+    "website": "https://wildyvpn.my.id",
     "success_url": "https://t.me/wildyvpn",
     "env": {
-        "API_ID": {"description": "Get this value from https://my.telegram.org"},
-        "API_HASH": {"description": "Get this value from https://my.telegram.org"},
-        "DATABASE_URL": {"description": "Mongodb url from https://cloud.mongodb.com/"},
-        "LOG_CHANNEL_ID": {"description": "Telegram Log Channel ID"},
+        "API_ID": {"description": "Di dapat Dari https://my.telegram.org"},
+        "API_HASH": {"description": "Di dapat Dari https://my.telegram.org"},
+        "DATABASE_URL": {"description": "Di Dapat Dari https://cloud.mongodb.com/"},
+        "LOG_CHANNEL_ID": {"description": "ID Grup Telegram"},
         "HU_STRING_SESSION": {
-            "description": "[USER MODE] - Get this using `bash genStr`",
+            "description": "[USER MODE] - Di dapat dari Bash genstr atau dari termux`",
             "required": false},
         "BOT_TOKEN": {
-            "description": "[BOT MODE] - Get this from https://t.me/botfather",
+            "description": "[BOT MODE] - Di Dapat Dari https://t.me/botfather",
             "required": false},
         "OWNER_ID": {
-            "description": "[BOT MODE] - Your user_id",
+            "description": "[BOT MODE] - ID Telegram Mu",
             "required": false},
         "HEROKU_APP_NAME": {
-            "description": "given app name to the heroku app",
+            "description": "Nama Project Heroku",
             "required": false},
         "HEROKU_API_KEY": {
-            "description": "get a Heroku API key from http://dashboard.heroku.com/account",
+            "description": "Di Dapai dari https://dashboard.heroku.com/account",
             "required": false}
+        "LOAD_UNOFFICIAL_PLUGINS": {"description": "Isi true Jika mau Menu Tambahan Jika Tidak Isi false"},
     },
     "addons": [],
     "buildpacks": [
