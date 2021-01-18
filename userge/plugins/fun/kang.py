@@ -146,7 +146,7 @@ async def kang_(message: Message):
                         if '-d' in message.flags:
                             await message.delete()
                         else:
-                            out = "__kanged__" if '-s' in message.flags else \
+                            out = " Tercolong" if '-s' in message.flags else \
                                 f"[kanged](t.me/addstickers/{packname})"
                             await message.edit(f"**Sticker** {out} __in a Different Pack__**!**")
                         return
