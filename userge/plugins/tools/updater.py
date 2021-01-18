@@ -67,7 +67,7 @@ async def check_update(message: Message):
             change_log = f'**New UPDATE available for [{branch}]:\n\n📄 CHANGELOG 📄**\n\n'
             await message.edit_or_send_as_file(change_log + out, disable_web_page_preview=True)
         else:
-            await message.edit(f'**Userge is up-to-date with [{branch}]**', del_in=5)
+            await message.edit(f'**WildyBot Sudah Verdi Terbaru [{branch}]**', del_in=5)
         return
     if pull_from_repo:
         if out:
@@ -75,7 +75,7 @@ async def check_update(message: Message):
             await _pull_from_repo(repo, branch)
             await CHANNEL.log(f"**PULLED update from [{branch}]:\n\n📄 CHANGELOG 📄**\n\n{out}")
             if not push_to_heroku:
-                await message.edit('**Userge Successfully Updated!**\n'
+                await message.edit('**WildyVPN Bot Succes Updated!**\n'
                                    '`Now restarting... Wait for a while!`', del_in=3)
                 asyncio.get_event_loop().create_task(userge.restart(True))
         elif push_to_heroku:
